@@ -1,0 +1,28 @@
+/*
+ * ============================================================
+ *  DESIGN TOKENS USCC (thiết kế Figma "uscc-slides")
+ *  Chỉ cần sửa file này để đổi toàn bộ giao diện (màu, font).
+ * ============================================================
+ */
+:root {
+  /* Màu thương hiệu */
+  --c-navy: #1a295e;        /* chữ chính, số lớn */
+  --c-blue: #5d78c4;        /* chữ phụ, mô tả */
+  --c-gold: #f1bf0c;        /* tiêu đề mục, đường nhấn, nút */
+  --c-gold-bright: #ffe607; /* dải sóng vàng */
+  --c-university: #234395;  /* khối tên trường trên bìa */
+  --c-workspace: #0d173b;   /* nền ngoài slide */
+  --c-line: #d6dce8;        /* đường phân cách bảng */
+  --c-track: #dfe4ef;       /* rãnh của thanh tiến độ */
+
+  /* Chữ */
+  --f-heading: 'Arimo', 'Segoe UI', Arial, sans-serif;
+  --f-body: 'Arimo', 'Segoe UI', Arial, sans-serif;
+  --f-mono: 'JetBrains Mono', Consolas, monospace;
+
+  /* Hình khối */
+  --radius: 12px;
+  --radius-sm: 6px;
+  --shadow: 0 12px 32px rgba(13, 23, 59, 0.12);
+  --pad: 85px; /* lề trái/phải nội dung = 6.65% khung 1280 */
+}

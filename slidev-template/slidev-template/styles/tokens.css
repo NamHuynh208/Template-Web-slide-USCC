@@ -1,0 +1,28 @@
+/*
+ * ============================================================
+ *  DESIGN TOKENS - chỉ cần sửa file này để đổi toàn bộ giao diện
+ *  (màu, font, bo góc, khoảng cách). Mọi layout đều dùng biến này.
+ * ============================================================
+ */
+:root {
+  /* Màu thương hiệu */
+  --c-primary: #4f46e5;
+  --c-primary-soft: #eef2ff;
+  --c-accent: #f59e0b;
+  --c-bg: #ffffff;
+  --c-bg-alt: #f8fafc;
+  --c-text: #0f172a;
+  --c-muted: #64748b;
+  --c-dark: #0b1020;
+
+  /* Chữ */
+  --f-heading: 'Be Vietnam Pro', 'Inter', sans-serif;
+  --f-body: 'Be Vietnam Pro', 'Inter', sans-serif;
+  --f-mono: 'JetBrains Mono', monospace;
+
+  /* Hình khối */
+  --radius: 20px;
+  --radius-sm: 10px;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --pad: 64px;
+}

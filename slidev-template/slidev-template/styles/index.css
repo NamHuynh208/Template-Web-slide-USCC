@@ -1,0 +1,60 @@
+@import './tokens.css';
+
+.slidev-layout {
+  font-family: var(--f-body);
+  color: var(--c-text);
+  background: var(--c-bg);
+  padding: 0;
+}
+
+.slidev-layout h1 {
+  font-family: var(--f-heading);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--c-text);
+}
+
+.slidev-layout h2,
+.slidev-layout h3 {
+  font-family: var(--f-heading);
+  font-weight: 700;
+  color: var(--c-text);
+}
+
+.slidev-layout ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.slidev-layout ul > li {
+  position: relative;
+  padding-left: 1.4em;
+  margin: 0.45em 0;
+}
+
+.slidev-layout ul > li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 0.55em;
+  height: 0.55em;
+  border-radius: 50%;
+  background: var(--c-primary);
+}
+
+.slidev-layout a {
+  color: var(--c-primary);
+  border-bottom: 1px solid currentColor;
+}
+
+/* Tiện ích dùng chung trong slide */
+.chip {
+  display: inline-block;
+  padding: 0.2em 0.8em;
+  border-radius: 999px;
+  background: var(--c-primary-soft);
+  color: var(--c-primary);
+  font-size: 0.75em;
+  font-weight: 600;
+}

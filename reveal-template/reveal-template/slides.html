@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Tên bài thuyết trình</title>
+  <!-- ============ KHUNG: GIỮ NGUYÊN, KHÔNG SỬA ============ -->
+  <link rel="stylesheet" href="lib/dist/reset.css">
+  <link rel="stylesheet" href="lib/dist/reveal.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+    <section data-markdown data-separator="^\n---\n" data-separator-vertical="^\n--\n" data-separator-notes="^Note:">
+      <!-- ============ NỘI DUNG: AI CHỈ THAY PHẦN TRONG TEXTAREA NÀY ============ -->
+      <textarea data-template>
+<!-- .slide: class="cover" -->
+# Tiêu đề chính của bài thuyết trình
+## Phụ đề ngắn gọn mô tả bài thuyết trình
+Tên diễn giả · 19/10/2026
+
+---
+
+<!-- .slide: class="section" -->
+## 01 | Tổng quan
+Một câu mô tả ngắn cho phần này
+
+---
+
+## Các điểm chính
+- Điểm quan trọng thứ nhất
+- Điểm quan trọng thứ hai
+- Điểm quan trọng thứ ba
+
+<div class="callout tip"><strong>Mẹo</strong>Dùng callout để nhấn mạnh một ý quan trọng.</div>
+
+Note: Ghi chú diễn giả, chỉ hiện khi nhấn phím S.
+
+---
+
+## Số liệu nổi bật
+<div class="stats"><div class="stat"><b>85%</b><span>Tỉ lệ hoàn thành</span><small>So với kỳ trước</small></div><div class="stat"><b>1.2K</b><span>Người tham gia</span></div><div class="stat"><b>4.8/5</b><span>Mức hài lòng</span></div></div>
+
+---
+
+<!-- .slide: class="split" -->
+## Nội dung kèm hình ảnh
+- Chữ bên trái, ảnh bên phải
+- Thêm chữ left vào class để đảo bên
+
+![](images/sample.svg)
+
+---
+
+## Lộ trình thực hiện
+<ol class="timeline"><li><strong>Chuẩn bị</strong><em>Tuần 1</em><span>Thu thập nội dung</span></li><li><strong>Triển khai</strong><em>Tuần 2-3</em><span>Thực hiện kế hoạch</span></li><li><strong>Tổng kết</strong><em>Tuần 4</em><span>Đánh giá kết quả</span></li></ol>
+
+---
+
+## So sánh hai phương án
+<div class="cols"><div>
+
+### Phương án A
+- Chi phí thấp
+- Triển khai nhanh
+
+</div><div>
+
+### Phương án B
+- Hiệu quả lâu dài
+- Cần đầu tư ban đầu
+
+</div></div>
+
+---
+
+<!-- .slide: class="quote" -->
+> Một câu trích dẫn ngắn, đáng nhớ.
+
+<p class="author">— Tên người nói</p>
+
+---
+
+<!-- .slide: class="end" -->
+# Cảm ơn!
+Xin mời đặt câu hỏi
+<p class="contact">email@example.com</p>
+      </textarea>
+    </section>
+  </div>
+</div>
+
+<!-- ============ KHUNG: GIỮ NGUYÊN, KHÔNG SỬA ============ -->
+<script src="lib/dist/reveal.js"></script>
+<script src="lib/plugin/markdown/markdown.js"></script>
+<script src="lib/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({
+    width: 1280,
+    height: 720,
+    margin: 0,
+    center: false,
+    hash: true,
+    slideNumber: 'c/t',
+    progress: true,
+    transition: 'slide',
+    controls: true,
+    controlsLayout: 'edges',
+    plugins: [RevealMarkdown, RevealNotes]
+  }).then(function () {
+    // Nền toàn màn hình cho các slide đặc biệt, lấy màu từ theme.css
+    var css = getComputedStyle(document.documentElement);
+    var v = function (n) { return css.getPropertyValue(n).trim(); };
+    var dark = 'linear-gradient(135deg, ' + v('--c-dark') + ', ' + v('--c-dark-2') + ')';
+    var bg = {
+      cover: { gradient: dark },
+      end: { gradient: dark },
+      section: { color: v('--c-primary') },
+      quote: { color: v('--c-primary-soft') }
+    };
+    document.querySelectorAll('.slides section').forEach(function (s) {
+      Object.keys(bg).forEach(function (k) {
+        if (s.classList.contains(k)) {
+          if (bg[k].gradient) s.setAttribute('data-background-gradient', bg[k].gradient);
+          if (bg[k].color) s.setAttribute('data-background-color', bg[k].color);
+        }
+      });
+    });
+    Reveal.sync();
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+/*
+ * ============================================================
+ *  Style chung USCC — typography, thẻ, bảng, số trang.
+ *  Vị trí/khung của từng loại slide nằm trong layouts/*.vue.
+ * ============================================================
+ */
+@import './tokens.css';
+
+* { box-sizing: border-box; }
+
+.slidev-layout {
+  font-family: var(--f-body);
+  color: var(--c-navy);
+}
+
+/* ---------- Typography ---------- */
+
+h1, h2, h3 { font-family: var(--f-heading); color: var(--c-navy); margin: 0; }
+
+.content h2 {
+  margin-bottom: 27px;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--c-gold);
+}
+
+.content h3 { font-size: 25px; font-weight: 700; line-height: 1.2; margin-bottom: 10px; }
+
+.content p { font-size: 17px; line-height: 1.45; color: var(--c-blue); margin: 0; }
+
+.centered h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  color: var(--c-gold);
+}
+
+.centered .lead { font-size: 22px; color: var(--c-blue); }
+
+.cover-copy h1 {
+  margin: 22px 0 14px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  color: var(--c-gold);
+}
+
+.cover-copy h1 span { margin-right: 7%; }
+
+.cover-copy h1 i { margin-left: 25%; font-style: normal; }
+
+.cover-copy p { font-size: 19px; line-height: 1.35; color: var(--c-blue); }
+
+.eyebrow {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--c-navy);
+}
+
+header .eyebrow { font-size: 13px; letter-spacing: 0.16em; }
+
+/* ---------- Thẻ nội dung (article) ---------- */
+
+.content article {
+  border-top: 2px solid var(--c-gold);
+  padding-top: 16px;
+}
+
+/* ---------- Bảng ---------- */
+
+.content table { width: 100%; border-collapse: collapse; font-size: 16px; }
+
+.content th {
+  text-align: left;
+  padding: 7px 0;
+  border-bottom: 2px solid var(--c-gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.content td { padding: 12px 0; border-bottom: 1px solid var(--c-line); font-weight: 700; }
+
+.content td:nth-child(2) { color: var(--c-blue); font-weight: 400; }
+
+/* ---------- Số trang ---------- */
+
+.page-num {
+  position: absolute;
+  left: var(--pad);
+  bottom: 16px;
+  z-index: 3;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--c-navy);
+}
